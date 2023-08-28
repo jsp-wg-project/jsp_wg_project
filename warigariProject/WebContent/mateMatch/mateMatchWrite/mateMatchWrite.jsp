@@ -65,17 +65,17 @@
             <div class="time-box2">
               <input
                 class="time-start-input"
-                type="text"
+                type="time"
                 placeholder="시작 시간"
               />
-              <div class="si">시</div>
+              <div class="si"></div>
               <div class="wave">~</div>
               <input
                 class="time-end-input"
-                type="text"
+                type="time"
                 placeholder="종료 시간"
               />
-              <div class="si">시</div>
+              <div class="si"></div>
             </div>
           </div>
 

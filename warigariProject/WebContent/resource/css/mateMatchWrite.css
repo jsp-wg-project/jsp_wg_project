@@ -156,7 +156,7 @@ form {
   display: flex;
 }
 .time-start-input {
-  width: 54px;
+  width: 100px;
   height: 100%;
   border-radius: 6px;
 }
@@ -173,7 +173,7 @@ form {
   align-items: center;
 }
 .time-end-input {
-  width: 54px;
+  width: 100px;
   height: 100%;
   border-radius: 6px;
 }
