@@ -6,6 +6,7 @@
 <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../resource/css/mateMatchEdit.css" />
+    <script defer src="../../resource/js/mateMatchEdit.js"></script>
     <title>메이트찾기 글수정</title>
   </head>
   <%@ include file="../../headerLogin.jsp" %>
@@ -25,8 +26,8 @@
             <div class="court-name-input">
               <input
                 class="court-name-input-text"
-                type="text"
-                placeholder="코트 이름 입력"
+                value="" type="text"
+                placeholder="코트 이름 입력" disabled
               />
             </div>
           </div>
@@ -36,16 +37,19 @@
             <div class="court-address-input-box1">
               <input
                 class="court-address-input-address"
-                type="text"
-                placeholder="테니스장 주소"
+                type="text" value=""
+                placeholder="테니스장 주소" disabled
               />
             </div>
             <div class="court-address-input-box2">
-              <button class="court-address-input-box2-button" type="">
+              <button class="court-address-input-box2-button" type=""
+              id="openPopup">
                 주소찾기
               </button>
             </div>
           </div>
+          <!-- 팝업 내용을 담을 공간 -->
+          <div id="popupContainer" style="display: none;"></div>
 
           <!-- 날짜 -->
           <div class="date">
