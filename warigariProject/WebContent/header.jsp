@@ -16,7 +16,7 @@
         <div class="main-header-container">
             <div class="main-header-logo-category">
                 <div class="main-header-logo">
-                    <a href="mainPage.html" class="main-header-logo-tag">
+                    <a href="${pageContext.request.contextPath}/index.jsp" class="main-header-logo-tag">
                         <img class="main-header-logo-img" 
                         src="${pageContext.request.contextPath}/resource/img/warigarilogo.png"
                         alt="main-header-logo-img">
@@ -25,12 +25,12 @@
                 <nav class="main-header-category">
                     <ul class="main-header-category-ul">   
                         <li class="main-header-category-list">
-                            <a href="" class="main-header-category-matetag">
+                            <a href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchList.jsp" class="main-header-category-matetag">
                             메이트 찾기
                             </a>
                         </li>
                         <li class="main-header-category-list">
-                            <a href="" class="main-header-category-communitytag">
+                            <a href="${pageContext.request.contextPath}/community/freeboardList/freeboardList.jsp" class="main-header-category-communitytag">
                             커뮤니티
                             </a>
                         </li>
@@ -40,17 +40,17 @@
                 <article class = "main-sub-menu">
                     <ul class="main-sub-menu-ul">
                         <li class="main-sub-menu-li">
-                            <a href="" class="main-sub-menu-tag">
+                            <a href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.jsp" class="main-sub-menu-tag">
                                 자유게시판
                             </a>
                         </li>
                         <li class="main-sub-menu-li">
-                            <a href="" class="main-sub-menu-tag">
+                            <a href="${pageContext.request.contextPath}/community/qna/qnaList/qnaList.jsp" class="main-sub-menu-tag">
                                 Q&A
                             </a>
                         </li>
                         <li class="main-sub-menu-li">
-                            <a href="" class="main-sub-menu-tag">
+                            <a href="${pageContext.request.contextPath}/community/notice/noticeList/noticeList.jsp" class="main-sub-menu-tag">
                                 공지사항
                             </a>
                         </li>
@@ -61,13 +61,13 @@
             <div class="main-header-service">
                 <div class="main-header-service-login">
                     <a class="main-header-service-login-tag"
-                    href="">
+                    href="${pageContext.request.contextPath}/login/signIn/signIn.jsp">
                         로그인
                     </a>
                 </div>
                 <div class="main-header-service-join">
                     <a class="main-header-service-join-tag"
-                    href="">
+                    href="${pageContext.request.contextPath}/login/signUp/signUp.jsp">
                         회원가입
                     </a>
                 </div>

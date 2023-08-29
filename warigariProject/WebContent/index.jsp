@@ -6,14 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인페이지</title>
-    <link rel="stylesheet" href="resource/css/mainPage.css">
-    <script defer src="resource/js/mainPage.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/mainPage.css">
+    <script defer src="${pageContext.request.contextPath}/resource/js/mainPage.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f49922a8774592c118e15c56666d5011&libraries=services"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </head>
 <body>
     <%@ include file="header.jsp" %>
     <main>
+    	<!-- 베너 화면 -->
         <section class="main-section1">
             <div class="main-banner-group">
                 <div class="main-banner-list">
@@ -51,6 +52,7 @@
                         alt="main-banner-img1">
                     </a>
                 </div>
+                <!-- 배너 버튼 -->
                 <button type="button" class="arrow-prev">&lt;</button>
                 <button type="button" class="arrow-next">&gt;</button>
                 <div class="main-banner-cnt">
@@ -60,20 +62,20 @@
                 </div>
             </div>
         </section>
-
+		<!-- 메이트 찾기 최신순 4개 출력 -->
         <section class="main-section2">
             <div class="main-section2-title">
                 <div class="main-section2-title-text">
                     메이트 찾기
                 </div>
                 <div class="main-section2-title-more">
-                    <a class="main-section2-title-more-tag" href="/mateMatch/mateMatchList/mateMatchList.html">
+                    <a class="main-section2-title-more-tag" href="${pageContext.request.contextPath}/mateMatch/mateMatchList/mateMatchList.jsp">
                         더보기
                     </a>
                 </div>
             </div>
             <form action="" class="main-form-mate">
-                <a href="/mateMatch/mateMatchViewDetail/mateMatchViewDetail.html" class="main-section2-mate-tag">             
+                <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
                             호원실내테니스장
@@ -126,7 +128,7 @@
                         </div>
                         <div class="main-section2-mate-comment">
                             
-                            <img src="resource/img/commentImg.png" class="main-section2-mate-comment-img"
+                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -135,7 +137,7 @@
                     </div>
                 </a>
 
-                <a href="/mateMatch/mateMatchViewDetail/mateMatchViewDetail.html" class="main-section2-mate-tag">             
+                <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
                             호원실내테니스장
@@ -187,7 +189,7 @@
                             </div>
                         </div>
                         <div class="main-section2-mate-comment">
-                            <img src="resource/img/commentImg.png" class="main-section2-mate-comment-img"
+                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -196,7 +198,7 @@
                     </div>
                 </a> 
 
-                <a href="/mateMatch/mateMatchViewDetail/mateMatchViewDetail.html" class="main-section2-mate-tag">             
+                <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
                             호원실내테니스장
@@ -248,7 +250,7 @@
                             </div>
                         </div>
                         <div class="main-section2-mate-comment">
-                            <img src="resource/img/commentImg.png" class="main-section2-mate-comment-img"
+                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -257,7 +259,7 @@
                     </div>
                 </a> 
 
-                <a href="/mateMatch/mateMatchViewDetail/mateMatchViewDetail.html" class="main-section2-mate-tag">             
+                <a href="${pageContext.request.contextPath}/mateMatch/mateMatchViewDetail/mateMatchViewDetail.jsp" class="main-section2-mate-tag">             
                     <div class="main-section2-mate">
                         <div class="main-section2-mate-title">
                             호원실내테니스장
@@ -309,7 +311,7 @@
                             </div>
                         </div>
                         <div class="main-section2-mate-comment">
-                            <img src="resource/img/commentImg.png" class="main-section2-mate-comment-img"
+                            <img src="resource/img/comment.png" class="main-section2-mate-comment-img"
                             alt="main-section2-mate-comment-img">
                             <div class="main-section2-mate-comment-count">
                                 12
@@ -319,14 +321,15 @@
                 </a> 
             </form>
         </section>
-
+        
+		<!-- 커뮤니티 게시판(자유게시판, Q&A 최신순 3개씩) -->
         <section class="main-section3">
             <div class="main-section3-title">
                 <div class="main-section3-title-text">
                     커뮤니티
                 </div>
                 <div class="main-section3-title-more">
-                    <a class="main-section3-title-more-tag" href="/community/freeboard/freeboardList/freeboardList.html">
+                    <a class="main-section3-title-more-tag" href="${pageContext.request.contextPath}/community/freeboard/freeboardList/freeboardList.jsp">
                         더보기
                     </a>
                 </div>
@@ -336,7 +339,7 @@
                     <div class="main-section3-section1">
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
-                                <a href="/community/freeboard/freeboardViewDetail/freeboardViewDetail.html" class="main-section3-community-board-tag">
+                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -353,7 +356,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
-                                    <img src="resource/img/commentImg.png"
+                                    <img src="resource/img/comment.png"
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
@@ -365,7 +368,7 @@
                         <hr>
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
-                                <a href="/community/freeboard/freeboardViewDetail/freeboardViewDetail.html" class="main-section3-community-board-tag">
+                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -382,7 +385,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
-                                    <img src="resource/img/commentImg.png"
+                                    <img src="resource/img/comment.png"
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
@@ -394,7 +397,7 @@
                         <hr>
                         <div class="main-section3-community-board">
                             <div class="main-section3-community-board-title">
-                                <a href="/community/freeboard/freeboardViewDetail/freeboardViewDetail.html" class="main-section3-community-board-tag">
+                                <a href="${pageContext.request.contextPath}/community/freeboard/freeboardViewDetail/freeboardViewDetail.jsp" class="main-section3-community-board-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -411,7 +414,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-board-comment">
-                                    <img src="resource/img/commentImg.png"
+                                    <img src="resource/img/comment.png"
                                     class="main-section3-community-board-commentImg"
                                     alt="main-section3-community-board-commentImg">
                                     <div class="main-section3-community-board-commentCount">
@@ -426,7 +429,7 @@
                     <div class="main-section3-section2">
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
-                                <a href="/community/qna/qnaViewDetail/qnaViewDetail.html" class="main-section3-community-QA-tag">
+                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -443,7 +446,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
-                                    <img src="resource/img/commentImg.png"
+                                    <img src="resource/img/comment.png"
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
@@ -455,7 +458,7 @@
                         <hr>
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
-                                <a href="/community/qna/qnaViewDetail/qnaViewDetail.html" class="main-section3-community-QA-tag">
+                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -472,7 +475,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
-                                    <img src="resource/img/commentImg.png"
+                                    <img src="resource/img/comment.png"
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
@@ -484,7 +487,7 @@
                         <hr>
                         <div class="main-section3-community-QA">
                             <div class="main-section3-community-QA-title">
-                                <a href="/community/qna/qnaViewDetail/qnaViewDetail.html" class="main-section3-community-QA-tag">
+                                <a href="${pageContext.request.contextPath}/community/qna/qnaViewDetail/qnaViewDetail.jsp" class="main-section3-community-QA-tag">
                                     구력 2개월 테린인데 라켓 추천부탁드려요 구력 2개월 테린인데 라켓 추천부탁드려요
                                 </a>
                             </div>
@@ -501,7 +504,7 @@
                                     </div>
                                 </div>
                                 <div class="main-section3-community-QA-comment">
-                                    <img src="resource/img/commentImg.png"
+                                    <img src="resource/img/comment.png"
                                     class="main-section3-community-QA-commentImg"
                                     alt="main-section3-community-QA-commentImg">
                                     <div class="main-section3-community-QA-commentCount">
@@ -515,7 +518,7 @@
             </div>
             </div>
         </section>
-
+		<!-- 카카오 api 지도 불러오기 -->
         <section class="main-section4">
             <div class="main-section4-title">지도 검색</div>
             <hr class="main-section4-hr">
